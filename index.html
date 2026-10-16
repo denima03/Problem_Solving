@@ -1,0 +1,562 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KKA X PPLG | Misi Pemecahan Masalah</title>
+<style>
+:root {
+  --primary:#2457d6;
+  --dark:#172554;
+  --light:#eff6ff;
+  --green:#15803d;
+  --red:#b91c1c;
+  --bg:#f4f7fb;
+}
+* { box-sizing:border-box; }
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:#1e293b;
+  line-height:1.65;
+}
+header {
+  background:linear-gradient(135deg,#172554,#2457d6);
+  color:white;
+  padding:35px 20px;
+  text-align:center;
+}
+header h1 { margin:0 0 8px; font-size:clamp(26px,4vw,42px); }
+header p { margin:5px; }
+nav {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+  background:white;
+  padding:12px;
+  position:sticky;
+  top:0;
+  z-index:5;
+  box-shadow:0 2px 8px #0001;
+}
+nav a {
+  text-decoration:none;
+  color:var(--dark);
+  background:var(--light);
+  padding:8px 12px;
+  border-radius:9px;
+  font-size:14px;
+  font-weight:bold;
+}
+main { max-width:1050px; margin:auto; padding:20px; }
+section {
+  background:white;
+  padding:24px;
+  margin:20px 0;
+  border-radius:16px;
+  box-shadow:0 4px 15px #0f172a0a;
+  scroll-margin-top:90px;
+}
+h2 { color:var(--dark); margin-top:0; }
+h3 { color:var(--primary); }
+.hero {
+  background:linear-gradient(135deg,#dbeafe,#eff6ff);
+  border-left:5px solid var(--primary);
+  padding:18px;
+  border-radius:10px;
+}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:14px;
+}
+.tile {
+  padding:17px;
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+}
+.tile strong { color:var(--primary); }
+button {
+  cursor:pointer;
+  border:0;
+  border-radius:9px;
+  background:var(--primary);
+  color:white;
+  padding:11px 16px;
+  font-weight:bold;
+  margin:4px 2px;
+}
+button:hover { filter:brightness(.92); }
+button:disabled { opacity:.4; cursor:not-allowed; }
+.secondary { background:#e2e8f0; color:#172554; }
+.option {
+  display:block;
+  width:100%;
+  text-align:left;
+  background:#f8fafc;
+  color:#1e293b;
+  border:1px solid #cbd5e1;
+  margin:8px 0;
+  padding:13px;
+  font-weight:normal;
+}
+.option.selected { border:2px solid var(--primary); background:#dbeafe; }
+.feedback {
+  display:none;
+  padding:13px;
+  border-radius:9px;
+  margin-top:12px;
+  background:#f1f5f9;
+}
+.good { color:var(--green); font-weight:bold; }
+.bad { color:var(--red); font-weight:bold; }
+.step {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  border:1px solid #cbd5e1;
+  padding:10px;
+  margin:8px 0;
+  border-radius:9px;
+}
+.step span { flex:1; }
+.step button { padding:7px 11px; }
+label { display:block; margin:12px 0 5px; font-weight:bold; }
+select,textarea,input {
+  width:100%;
+  padding:11px;
+  border:1px solid #cbd5e1;
+  border-radius:8px;
+  font:inherit;
+}
+textarea { min-height:100px; }
+footer {
+  background:var(--dark);
+  color:white;
+  text-align:center;
+  padding:24px;
+}
+.progress {
+  height:8px;
+  background:#dbeafe;
+  border-radius:8px;
+  overflow:hidden;
+  margin:12px 0;
+}
+.progress div { height:100%; background:var(--primary); width:0; }
+@media(max-width:600px) {
+  main { padding:10px; }
+  section { padding:17px; }
+  nav { position:static; }
+}
+</style>
+</head>
+<body>
+<header>
+  <p>MEDIA PEMBELAJARAN INTERAKTIF</p>
+  <h1>🚀 Misi Pemecahan Masalah Digital</h1>
+  <p>Koding dan Kecerdasan Artifisial · Kelas X PPLG</p>
+  <p>Belajar berpikir logis seperti seorang programmer!</p>
+</header>
+
+<nav>
+  <a href="#tujuan">Tujuan</a>
+  <a href="#materi">Materi</a>
+  <a href="#simulasi">Simulasi</a>
+  <a href="#algoritma">Algoritma</a>
+  <a href="#kuis">Kuis</a>
+  <a href="#refleksi">Refleksi</a>
+</nav>
+
+<main>
+<section id="tujuan">
+  <h2>🎯 1. Tujuan Pembelajaran</h2>
+  <div class="hero">
+    Setelah mengikuti kegiatan ini, siswa mampu mengidentifikasi masalah,
+    menganalisis penyebab, memilih solusi yang logis, menyusun algoritma,
+    dan mengevaluasi hasil penyelesaian masalah.
+  </div>
+  <h3>Alur belajar</h3>
+  <div class="grid">
+    <div class="tile">🔎<br><strong>1. Pahami</strong><br>Kenali masalah dan kebutuhan.</div>
+    <div class="tile">🧩<br><strong>2. Analisis</strong><br>Pisahkan masalah menjadi bagian kecil.</div>
+    <div class="tile">💡<br><strong>3. Rancang</strong><br>Pilih solusi dan susun algoritma.</div>
+    <div class="tile">🧪<br><strong>4. Uji</strong><br>Periksa apakah solusi berhasil.</div>
+  </div>
+</section>
+
+<section id="materi">
+  <h2>📘 2. Memahami Konsep Pemecahan Masalah</h2>
+  <p>
+    Pemecahan masalah adalah proses menemukan solusi yang tepat untuk
+    mengatasi suatu keadaan yang tidak sesuai dengan tujuan.
+    Dalam bidang PPLG, proses ini digunakan saat merancang aplikasi,
+    membuat program, mengolah data, dan memperbaiki kesalahan kode.
+  </p>
+  <div class="grid">
+    <div class="tile">
+      <h3>🔎 Identifikasi masalah</h3>
+      Menentukan apa yang salah, siapa yang terdampak, dan hasil yang diharapkan.
+    </div>
+    <div class="tile">
+      <h3>🧩 Dekomposisi</h3>
+      Membagi masalah besar menjadi tugas-tugas kecil yang lebih mudah dikerjakan.
+    </div>
+    <div class="tile">
+      <h3>🔁 Pengenalan pola</h3>
+      Menemukan kesamaan atau kejadian berulang yang membantu mencari solusi.
+    </div>
+    <div class="tile">
+      <h3>🎯 Abstraksi</h3>
+      Memusatkan perhatian pada informasi penting dan mengabaikan hal yang tidak relevan.
+    </div>
+    <div class="tile">
+      <h3>📋 Algoritma</h3>
+      Menyusun langkah penyelesaian secara terurut, jelas, dan logis.
+    </div>
+    <div class="tile">
+      <h3>🧪 Pengujian</h3>
+      Memastikan solusi bekerja dan memperbaiki kesalahan jika ditemukan.
+    </div>
+  </div>
+
+  <h3>Contoh kasus PPLG</h3>
+  <p><strong>Masalah:</strong> aplikasi nilai siswa menghasilkan rata-rata yang salah.</p>
+  <ol>
+    <li>Periksa nilai yang dimasukkan.</li>
+    <li>Periksa rumus penjumlahan dan pembagian.</li>
+    <li>Bandingkan hasil program dengan perhitungan manual.</li>
+    <li>Perbaiki rumus jika ditemukan kesalahan.</li>
+    <li>Uji kembali dengan beberapa contoh nilai.</li>
+  </ol>
+</section>
+
+<section id="simulasi">
+  <h2>🕹️ 3. Simulasi Interaktif</h2>
+  <p>
+    Kamu adalah programmer pemula. Pilih masalah yang ditemukan,
+    kemudian tentukan pemeriksaan dan tindakan yang tepat.
+  </p>
+
+  <label for="problem">Pilih masalah aplikasi</label>
+  <select id="problem" onchange="resetSimulasi()">
+    <option value="nilai">Rata-rata nilai siswa salah.</option>
+    <option value="login">Pengguna tidak dapat login.</option>
+    <option value="data">Data siswa tidak muncul.</option>
+  </select>
+
+  <label for="cause">Apa yang harus diperiksa?</label>
+  <select id="cause">
+    <option value="">-- Pilih jawaban --</option>
+  </select>
+
+  <label for="action">Apa tindakan terbaik?</label>
+  <select id="action">
+    <option value="">-- Pilih tindakan --</option>
+    <option value="asal">Mengganti seluruh aplikasi tanpa pengujian.</option>
+    <option value="uji">Menganalisis penyebab, memperbaiki bagian terkait, lalu menguji.</option>
+    <option value="abaikan">Mengabaikan masalah.</option>
+  </select>
+
+  <button onclick="periksaSimulasi()">Periksa Jawaban</button>
+  <button class="secondary" onclick="resetSimulasi()">Ulangi</button>
+  <div id="hasilSimulasi" class="feedback" aria-live="polite"></div>
+</section>
+
+<section id="algoritma">
+  <h2>🧠 4. Tantangan Menyusun Algoritma</h2>
+  <p>
+    Susun langkah berikut agar aplikasi dapat menghitung rata-rata
+    dari tiga nilai siswa. Gunakan tombol ↑ dan ↓.
+  </p>
+  <div id="daftarLangkah"></div>
+  <button onclick="periksaAlgoritma()">Periksa Urutan</button>
+  <button class="secondary" onclick="acakAlgoritma()">Acak Lagi</button>
+  <div id="hasilAlgoritma" class="feedback" aria-live="polite"></div>
+  <h3>Ingat konsep IPO</h3>
+  <div class="grid">
+    <div class="tile"><strong>Input</strong><br>Masukkan tiga nilai.</div>
+    <div class="tile"><strong>Process</strong><br>Jumlahkan, lalu bagi tiga.</div>
+    <div class="tile"><strong>Output</strong><br>Tampilkan rata-rata.</div>
+  </div>
+</section>
+
+<section id="kuis">
+  <h2>🏆 5. Kuis Pemahaman</h2>
+  <p>Jawab lima pertanyaan berikut untuk mengukur pemahamanmu.</p>
+  <div class="progress"><div id="barProgress"></div></div>
+  <p id="nomorKuis"></p>
+  <h3 id="pertanyaan"></h3>
+  <div id="pilihan"></div>
+  <div id="umpanBalik" class="feedback" aria-live="polite"></div>
+  <button id="btnLanjut" onclick="lanjutKuis()" disabled>Soal Berikutnya →</button>
+  <div id="hasilKuis" class="feedback"></div>
+  <button class="secondary" onclick="mulaiKuis()">Ulangi Kuis</button>
+</section>
+
+<section id="refleksi">
+  <h2>📝 6. Refleksi Siswa</h2>
+  <p>Isilah refleksi berikut berdasarkan kegiatan yang sudah kamu lakukan.</p>
+  <label for="paham">Konsep apa yang paling kamu pahami?</label>
+  <select id="paham">
+    <option value="">-- Pilih --</option>
+    <option>Identifikasi masalah</option>
+    <option>Dekomposisi</option>
+    <option>Pengenalan pola</option>
+    <option>Abstraksi</option>
+    <option>Algoritma dan pengujian</option>
+  </select>
+  <label for="tantangan">Masalah apa yang masih sulit kamu pahami?</label>
+  <textarea id="tantangan" placeholder="Tuliskan jawabanmu..."></textarea>
+  <label for="solusi">Bagaimana kamu akan menerapkan cara berpikir ini saat membuat aplikasi?</label>
+  <textarea id="solusi" placeholder="Tuliskan rencanamu..."></textarea>
+  <button onclick="simpanRefleksi()">Simpan Refleksi di Perangkat</button>
+  <button class="secondary" onclick="cetakHasil()">Cetak / Simpan PDF</button>
+  <div id="hasilRefleksi" class="feedback"></div>
+  <p><small>Catatan: penyimpanan refleksi menggunakan browser perangkat ini. Data tidak dikirim ke guru secara otomatis.</small></p>
+</section>
+</main>
+
+<footer>
+  <strong>KKA Kelas X PPLG</strong>
+  <p>Berpikir logis · Menemukan solusi · Menciptakan teknologi</p>
+</footer>
+
+<script>
+const penyebab = {
+  nilai: [
+    ["rumus","Rumus perhitungan, data nilai, dan pembagi."],
+    ["warna","Warna dan bentuk tombol aplikasi."],
+    ["nama","Nama pembuat aplikasi."]
+  ],
+  login: [
+    ["autentikasi","Input pengguna, validasi, dan proses autentikasi."],
+    ["warna","Warna latar halaman."],
+    ["monitor","Ukuran monitor pengguna."]
+  ],
+  data: [
+    ["database","Proses penyimpanan, koneksi basis data, dan kueri data."],
+    ["font","Jenis huruf pada halaman."],
+    ["ikon","Warna ikon aplikasi."]
+  ]
+};
+const jawabanPenyebab = {
+  nilai:"rumus", login:"autentikasi", data:"database"
+};
+
+function isiPenyebab() {
+  const p = document.getElementById("problem").value;
+  const select = document.getElementById("cause");
+  select.innerHTML = '<option value="">-- Pilih jawaban --</option>';
+  penyebab[p].forEach(item => {
+    const opt = document.createElement("option");
+    opt.value = item[0];
+    opt.textContent = item[1];
+    select.appendChild(opt);
+  });
+}
+function resetSimulasi() {
+  isiPenyebab();
+  document.getElementById("action").value = "";
+  document.getElementById("hasilSimulasi").style.display = "none";
+}
+function periksaSimulasi() {
+  const p = document.getElementById("problem").value;
+  const c = document.getElementById("cause").value;
+  const a = document.getElementById("action").value;
+  const box = document.getElementById("hasilSimulasi");
+  box.style.display = "block";
+  if (!c || !a) {
+    box.textContent = "Pilih jawaban untuk kedua langkah terlebih dahulu.";
+    return;
+  }
+  if (c === jawabanPenyebab[p] && a === "uji") {
+    box.innerHTML = '<span class="good">Hebat! Jawabanmu tepat.</span><br>Identifikasi bagian yang berkaitan dengan masalah, perbaiki penyebabnya, kemudian uji kembali dengan beberapa kondisi.';
+  } else {
+    box.innerHTML = '<span class="bad">Belum tepat. Coba pikirkan kembali.</span><br>Mulailah dengan memeriksa bagian aplikasi yang berkaitan langsung dengan gejala. Setelah memperbaiki penyebab, lakukan pengujian.';
+  }
+}
+
+const langkahBenar = [
+  "Masukkan tiga nilai",
+  "Jumlahkan ketiga nilai",
+  "Bagi jumlah dengan tiga",
+  "Tampilkan hasil rata-rata"
+];
+let langkah = [];
+function acakAlgoritma() {
+  langkah = [...langkahBenar].sort(() => Math.random() - 0.5);
+  renderLangkah();
+  document.getElementById("hasilAlgoritma").style.display = "none";
+}
+function renderLangkah() {
+  const el = document.getElementById("daftarLangkah");
+  el.innerHTML = "";
+  langkah.forEach((teks,i) => {
+    const row = document.createElement("div");
+    row.className = "step";
+    const span = document.createElement("span");
+    span.textContent = (i+1) + ". " + teks;
+    row.appendChild(span);
+    const up = document.createElement("button");
+    up.textContent = "↑";
+    up.setAttribute("aria-label","Pindah ke atas");
+    up.disabled = i === 0;
+    up.onclick = () => pindahLangkah(i,-1);
+    row.appendChild(up);
+    const down = document.createElement("button");
+    down.textContent = "↓";
+    down.setAttribute("aria-label","Pindah ke bawah");
+    down.disabled = i === langkah.length-1;
+    down.onclick = () => pindahLangkah(i,1);
+    row.appendChild(down);
+    el.appendChild(row);
+  });
+}
+function pindahLangkah(i,delta) {
+  const j = i+delta;
+  [langkah[i],langkah[j]] = [langkah[j],langkah[i]];
+  renderLangkah();
+  document.getElementById("hasilAlgoritma").style.display = "none";
+}
+function periksaAlgoritma() {
+  const benar = langkah.every((v,i) => v === langkahBenar[i]);
+  const box = document.getElementById("hasilAlgoritma");
+  box.style.display = "block";
+  box.innerHTML = benar
+    ? '<span class="good">Benar! Algoritma tersusun secara logis.</span><br>Input → Proses → Output.'
+    : '<span class="bad">Belum tepat.</span><br>Masukkan nilai terlebih dahulu, jumlahkan, bagi hasilnya dengan tiga, lalu tampilkan hasil.';
+}
+
+const soal = [
+  {
+    q:"1. Apa langkah pertama dalam memecahkan masalah?",
+    opsi:["Langsung menulis kode","Memahami dan mengidentifikasi masalah","Membeli perangkat baru"],
+    benar:1, alasan:"Masalah perlu dipahami sebelum solusi ditentukan."
+  },
+  {
+    q:"2. Membagi masalah besar menjadi bagian kecil disebut ...",
+    opsi:["Dekomposisi","Dekorasi","Kompilasi"],
+    benar:0, alasan:"Dekomposisi membuat masalah lebih mudah dianalisis."
+  },
+  {
+    q:"3. Mengapa solusi perlu diuji?",
+    opsi:["Agar kode lebih panjang","Untuk memastikan solusi bekerja","Agar warna berubah"],
+    benar:1, alasan:"Pengujian memeriksa apakah solusi sesuai kebutuhan."
+  },
+  {
+    q:"4. Urutan IPO yang benar adalah ...",
+    opsi:["Output–Input–Proses","Proses–Output–Input","Input–Proses–Output"],
+    benar:2, alasan:"Input adalah data masuk, Process adalah pengolahan, Output adalah hasil."
+  },
+  {
+    q:"5. Jika solusi belum berhasil, programmer sebaiknya ...",
+    opsi:["Meninjau hasil pengujian dan memperbaiki solusi","Menghapus semua data","Mengabaikan masalah"],
+    benar:0, alasan:"Hasil pengujian menjadi dasar perbaikan berikutnya."
+  }
+];
+let indeks = 0;
+let skor = 0;
+let terkunci = false;
+function mulaiKuis() {
+  indeks = 0; skor = 0; terkunci = false;
+  document.getElementById("hasilKuis").style.display = "none";
+  document.getElementById("umpanBalik").style.display = "none";
+  document.getElementById("btnLanjut").style.display = "inline-block";
+  tampilSoal();
+}
+function tampilSoal() {
+  terkunci = false;
+  const s = soal[indeks];
+  document.getElementById("nomorKuis").textContent =
+    "Soal " + (indeks+1) + " dari " + soal.length;
+  document.getElementById("barProgress").style.width =
+    (indeks/soal.length*100) + "%";
+  document.getElementById("pertanyaan").textContent = s.q;
+  document.getElementById("pilihan").innerHTML = "";
+  document.getElementById("umpanBalik").style.display = "none";
+  document.getElementById("btnLanjut").disabled = true;
+  s.opsi.forEach((teks,i) => {
+    const btn = document.createElement("button");
+    btn.className = "option";
+    btn.textContent = String.fromCharCode(65+i)+". "+teks;
+    btn.onclick = () => jawab(i,btn);
+    document.getElementById("pilihan").appendChild(btn);
+  });
+}
+function jawab(pilihan,btn) {
+  if (terkunci) return;
+  terkunci = true;
+  const s = soal[indeks];
+  const box = document.getElementById("umpanBalik");
+  box.style.display = "block";
+  document.querySelectorAll("#pilihan button").forEach(b => b.disabled = true);
+  if (pilihan === s.benar) {
+    skor++;
+    box.innerHTML = '<span class="good">Benar!</span> ' + s.alasan;
+    btn.classList.add("selected");
+  } else {
+    box.innerHTML = '<span class="bad">Belum tepat.</span> Jawaban yang benar: ' +
+      s.opsi[s.benar] + ". " + s.alasan;
+  }
+  document.getElementById("btnLanjut").disabled = false;
+  document.getElementById("btnLanjut").textContent =
+    indeks === soal.length-1 ? "Lihat Nilai" : "Soal Berikutnya →";
+}
+function lanjutKuis() {
+  if (!terkunci) return;
+  if (indeks < soal.length-1) {
+    indeks++;
+    tampilSoal();
+  } else {
+    document.getElementById("barProgress").style.width = "100%";
+    document.getElementById("pertanyaan").textContent = "Kuis selesai!";
+    document.getElementById("pilihan").innerHTML = "";
+    document.getElementById("nomorKuis").textContent = "Hasil evaluasi";
+    document.getElementById("umpanBalik").style.display = "none";
+    document.getElementById("btnLanjut").style.display = "none";
+    const nilai = Math.round(skor/soal.length*100);
+    const box = document.getElementById("hasilKuis");
+    box.style.display = "block";
+    box.innerHTML = "<h3>Nilai kamu: "+nilai+"/100</h3>"+
+      "Jawaban benar: "+skor+" dari "+soal.length+".<br>"+
+      (nilai >= 80 ? "Hebat! Kamu sudah memahami dasar pemecahan masalah."
+      : "Pelajari kembali materi, kemudian ulangi kuis untuk meningkatkan hasil.");
+  }
+}
+function simpanRefleksi() {
+  const data = {
+    paham:document.getElementById("paham").value,
+    tantangan:document.getElementById("tantangan").value,
+    solusi:document.getElementById("solusi").value
+  };
+  try {
+    localStorage.setItem("refleksiKKA",JSON.stringify(data));
+    document.getElementById("hasilRefleksi").textContent =
+      "Refleksi tersimpan di browser perangkat ini.";
+  } catch(e) {
+    document.getElementById("hasilRefleksi").textContent =
+      "Browser tidak mengizinkan penyimpanan lokal. Bapak/Ibu dapat mencetak refleksi ini.";
+  }
+  document.getElementById("hasilRefleksi").style.display = "block";
+}
+function cetakHasil() { window.print(); }
+
+isiPenyebab();
+acakAlgoritma();
+mulaiKuis();
+try {
+  const data = JSON.parse(localStorage.getItem("refleksiKKA") || "null");
+  if (data) {
+    document.getElementById("paham").value = data.paham || "";
+    document.getElementById("tantangan").value = data.tantangan || "";
+    document.getElementById("solusi").value = data.solusi || "";
+  }
+} catch(e) {}
+</script>
+</body>
+</html>
